@@ -1,0 +1,656 @@
+/* NAVBAR STYLES */
+.navbar-dark-custom {
+  background-color: #142938;
+}
+.navbar-dark-custom .navbar-nav .nav-link {
+color: #ffffff; /* White color for nav links */
+}
+.navbar-dark-custom .navbar-brand {
+color: #ffffff; /* White color for the brand */
+}
+.navbar-dark-custom .navbar-nav .nav-link:hover {
+color: #cccccc; /* Light gray color on hover */
+}
+
+.navbar-brand img {
+  width: 160px; /* Default width */
+  height: auto; /* Maintains aspect ratio */
+}
+.navbar-toggler {
+  background-color: #ffffff;
+}
+.navbar-toggler-icon {
+  color: #cccccc;
+}
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+  .navbar-brand img {
+      width: 120px; /* Adjust width for tablets */
+  }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 576px) {
+  .navbar-brand img {
+      width: 100px; /* Further reduce for mobile screens */
+  }
+}
+
+body {
+  background-color: #142938;    
+}
+h1 {
+  font-family: "Nunito Sans", serif;
+  font-size: 250%; /* 32px */
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+  font-weight: 300;
+}
+h2 {
+  font-family: "Nunito Sans", serif;
+  font-size: 175%; /* 28px */
+  line-height: 1.3;
+  margin-bottom: 0.6em;
+  font-weight: 300;
+}
+h3 {
+  font-family: "Nunito Sans", serif;
+  font-weight: 300;
+  font-size: 150%; /* 24px */
+  line-height: 1.4;
+  margin-bottom: 0.7em;
+}
+h4 {
+  font-family: "Nunito Sans", serif;
+  font-weight: 300;
+  font-size: 125%; /* 20px */
+  line-height: 1.5;
+  margin-bottom: 0.8em;
+}
+h1 {
+  font-family: "Nunito Sans", serif;
+  font-size: 250%; /* Large screens (32px) */
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+  font-weight: 300;
+}
+
+h2 {
+  font-family: "Nunito Sans", serif;
+  font-size: 175%; /* Large screens (28px) */
+  line-height: 1.3;
+  margin-bottom: 0.6em;
+  font-weight: 300;
+}
+
+h3 {
+  font-family: "Nunito Sans", serif;
+  font-weight: 300;
+  font-size: 150%; /* Large screens (24px) */
+  line-height: 1.4;
+  margin-bottom: 0.7em;
+}
+
+h4 {
+  font-family: "Nunito Sans", serif;
+  font-weight: 300;
+  font-size: 125%; /* Large screens (20px) */
+  line-height: 1.5;
+  margin-bottom: 0.8em;
+}
+p {
+font-family: "Montserrat", sans-serif;
+font-size: 100%; /* Default 16px */
+line-height: 1.5; /* Adjusted for readability */
+margin-bottom: 1em; /* Space between paragraphs */
+font-weight: 400; /* Regular weight */
+color: #333; /* Text color, can be adjusted */
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+  h1 {
+      font-size: 220%; /* 28px */
+  }
+  h2 {
+      font-size: 160%; /* 25px */
+  }
+  h3 {
+      font-size: 135%; /* 22px */
+  }
+  h4 {
+      font-size: 115%; /* 18px */
+  }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 576px) {
+  h1 {
+      font-size: 180%; /* 24px */
+  }
+  h2 {
+      font-size: 145%; /* 22px */
+  }
+  h3 {
+      font-size: 120%; /* 19px */
+  }
+  h4 {
+      font-size: 100%; /* 16px */
+  }
+}
+#TimelineIntroductionText h1 {
+font-family: "Nunito Sans", serif;
+color: white;
+
+font-size: 250%; /* 32px */
+line-height: 1.2;
+margin-bottom: 0.5em;
+font-weight: 300;
+}
+#TimelineIntroductionText p {
+font-family: "Montserrat", sans-serif;
+font-size: 110%; /* Slightly larger (e.g., 17.6px) */
+line-height: 1.6;
+color: white; /* Keeps the white color from your original */
+margin-bottom: 1em;
+font-weight: 300; /* Light weight */
+}
+#news-section-socials h1 {
+font-family: "Nunito Sans", serif;
+color: #ffffff;
+
+font-size: 250%; /* 32px */
+line-height: 1.2;
+margin-bottom: 0.5em;
+font-weight: 300;
+}
+#news-section-socials p {
+font-family: "Montserrat", sans-serif;
+font-size: 110%; /* Slightly larger (e.g., 17.6px) */
+line-height: 1.6;
+color: white; /* Keeps the white color from your original */
+margin-bottom: 1em;
+font-weight: 300; /* Light weight */
+}
+#news-section-updates h1 {
+font-family: "Nunito Sans", serif;
+color: #03001e;
+
+font-size: 250%; /* 32px */
+line-height: 1.2;
+margin-bottom: 0.5em;
+font-weight: 300;
+}
+#news-section-updates p {
+font-family: "Montserrat", sans-serif;
+font-size: 110%; /* Slightly larger (e.g., 17.6px) */
+line-height: 1.6;
+color: #03001e; /* Keeps the white color from your original */
+margin-bottom: 1em;
+font-weight: 300; /* Light weight */
+}
+.btn.btn-primary.btn-lg {
+  width: 12.5em; /* Roughly 200px, but responsive based on font size */
+  border-radius: 2.5em; /* Keeps consistent rounding */
+  background-color: #ffffff;
+  color: #000000;
+  padding: 0.75em 1.5em; /* Responsive padding */
+  border-width: 0.25em; /* Responsive border */
+  border-color: #ffffff;
+  border-style: solid;
+  font-size: 1.125em; /* Responsive font size, roughly 18px if base is 16px */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .btn.btn-primary.btn-lg {
+      width: 100%; /* Full-width on smaller screens */
+      font-size: 1em; /* Slightly reduce font size for smaller screens */
+      padding: 0.8em 1em; /* Adjust padding for a more compact look */
+      height: 70%;
+  }
+}
+
+
+.btn.btn-primary.btn-lg:hover {
+  border-color: #CDAF44 /* Change only the border color on hover */
+}
+
+
+.hero-top {
+  background-color: #142938; /* Dark background */
+  color: #ffffff; /* White text color */
+  padding: 40px 0; /* Spacing for vertical alignment */
+  text-align: center;
+}
+.hero-top h1, .hero-top h4 {
+  margin-bottom: 20px;
+}
+.hero-image {
+  background-image: url('path/to/your/image.jpg'); /* Replace with the path to your landscape image */
+  background-size: cover;
+  background-position: center;
+  width: 80%; /* Adjust the height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #CDAF44;
+}
+.hero-image img {
+  max-width: 100%; /* Adjust logo size as needed */
+}
+
+.facilities-landing {
+  background-color: #EFE6C5;
+  padding: 10px;
+}
+.facilities-div {
+  margin-top: 0%;
+}
+#landing-page h1 {
+  margin-top: 0%;
+  text-align: center;
+  /* Add any additional styles for landing page h1 */
+}
+/* Card styling */
+.card {
+  background-color: transparent;
+  max-width: 270px; /* Make the card width consistent */
+  margin: 0 auto; /* Center align cards within columns */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-color: transparent;
+  border-radius: 40px;
+}
+/* Hover state */
+.card:hover {
+  background-color: #ffffff; /* Change background color to white on hover */
+} 
+/* Row centering and alignment */
+.row {
+  justify-content: center;
+  text-align: center;
+}
+
+.row .col {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-top {
+  background-color: #142938;
+  color: #ffffff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hero-image {
+  background-image: url('path/to/your/image.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #CDAF44;
+}
+
+.facilities-landing {
+  background-color: #EFE6C5;
+  padding: 10px;
+}
+
+
+/* TIMELINE */
+.timeline {
+position: relative;
+max-width: 1200px;
+margin: 100px auto;
+opacity: 0; /* Make it invisible initially */
+transition: opacity 3s ease; /* 3s opacity transition */
+}
+
+.timeline.animate {
+opacity: 1; /* Fade in when animation starts */
+transition: opacity 3s ease; /* Smooth opacity transition */
+}
+
+.timeline-container {
+padding: 10px 50px;
+position: relative;
+width: 50%;
+background: transparent;
+opacity: 0; /* Initially invisible */
+transition: opacity 2s ease; /* Smooth opacity transition */
+}
+
+.timeline-container.animate {
+opacity: 1; /* Fade in when animation starts */
+transition: opacity 3s ease; /* OPACITY TRANSITION */
+}
+
+/* TIMELINE CONTAINER ANIMATION */
+@keyframes movedown {
+0% {
+  opacity: 1;
+  transform: translateY(-30px);
+}
+100% {
+  opacity: 1;
+  transform: translateY(0px);
+}
+}
+
+.timeline-container:nth-child(1) {
+animation-delay: 0s;
+}
+
+.timeline-container:nth-child(2) {
+animation-delay: 1s;
+}
+
+.timeline-container:nth-child(3) {
+animation-delay: 2s;
+}
+
+.timeline-container:nth-child(4) {
+animation-delay: 3s;
+}
+
+/* Timeline VERTICAL LINE*/
+.timeline::after {
+content: '';
+position: absolute;
+width: 10px;
+height: 100%;
+background: #E7BF30; 
+top: 0;
+left: 50%;
+margin-left: -3px;
+z-index: 1; /* STACKED AT BACK BEHIND TEXT BOX , SVG ETC*/
+opacity: 0; /* HIDDEN INITIALLY */
+transition: opacity 2.5s ease-in-out; /* OPACITY TRANSITION */
+}
+
+.timeline.animate::after {
+opacity: 1; 
+animation: moveline 10s linear forwards;
+}
+
+@keyframes moveline {
+0% {
+  height: 0;
+}
+100% {
+  height: 100%;
+}
+}
+
+/* TEXT BOX TIMELINE STYLING */
+.text-box {
+padding: 20px 30px;
+background: white;
+position: relative;
+font-size: 24px;
+border: 6px solid #E7BF30;
+border-radius: 20px;
+z-index: 2; /* STACKING OF ITEMS - THIS ENSURES ITS STACKED ABOVE LINE*/
+}
+
+/* Image alignment for left and right containers */
+.left-container {
+left: 0;
+text-align: right;
+}
+
+.right-container {
+left: 50%;
+text-align: left;
+}
+
+/* Image positioning for left and right containers */
+.left-container img {
+position: absolute;
+width: 50px;
+border-radius: 50%;
+right: -26px;
+top: 32px;
+z-index: 3; /* THIS IS THE STACKING ORDER*/
+}
+
+.right-container img {
+position: absolute;
+width: 50px;
+border-radius: 50%;
+left: -24px;
+top: 32px;
+z-index: 3;
+}
+
+/* Media Queries */
+@media screen and (max-width: 900px) {
+.timeline {
+  margin: 50px auto;
+}
+.timeline::after {
+  left: 31px;
+}
+.timeline-container {
+  width: 100%;
+  padding-left: 80px;
+  padding-right: 25px;
+}
+.text-box {
+  font-size: 13px;
+}
+.text-box small {
+  margin-bottom: 10px;
+}
+.right-container {
+  left: 0;
+}
+.left-container img,
+.right-container img {
+  left: 10px;
+}
+}
+.map-container iframe {
+width: 100%;
+height: 100%;
+border: 0;
+}
+.address-container {
+padding: 1rem;
+}
+/* FOOTER STYLES */
+footer.bg-light { 
+  background-color: #E7BF30 !important;
+}
+
+/* Square container for the Facebook embed */
+.square-container {
+width: 100%;
+max-width: 500px; /* Adjust as needed */
+aspect-ratio: 1 / 1; /* Ensures the container stays a square */
+overflow: hidden;
+position: relative;
+margin: 0 auto;
+border: 5px solid white; /* Adds a white border */
+background-color: white; /* Ensures a consistent background inside the border */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow for better aesthetics */
+border-radius: 8px; /* Optional: Rounds the corners */
+}
+
+.fb-page {
+width: 100% !important; /* Stretch to fit the square container */
+height: 100% !important; /* Match the height to enforce square shape */
+overflow: hidden;
+padding: 10px; /* Ensures space between the content and border */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+.square-container {
+  max-width: 300px; /* Smaller size for mobile */
+  border-width: 3px; /* Adjust border size for smaller screens */
+} 
+}
+/* Square container for the Instagram embed */
+.square-container {
+width: 100%;
+max-width: 500px; /* Match text side */
+aspect-ratio: 1 / 1; /* Maintains square dimensions */
+overflow: hidden;
+position: relative;
+margin: 0 auto;
+border: 5px solid white; /* Adds a white border */
+background-color: white;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+border-radius: 8px; /* Rounds the corners */
+}
+
+/* Instagram Embed Adjustments */
+.instagram-info-container img {
+max-width: 50%; /* Resizes the icon */
+height: auto;
+margin: 0 auto;
+}
+
+.instagram-info-container h1 {
+font-size: 2rem; /* Adjusts text size */
+margin: 10px 0;
+}
+
+.instagram-info-container p {
+font-size: 1rem; /* Default paragraph text */
+line-height: 1.5;
+margin: 5px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+.square-container {
+  max-width: 300px;
+}
+
+.instagram-info-container img {
+  max-width: 40%; /* Further reduce icon size */
+}
+
+.instagram-info-container h1 {
+  font-size: 1.5rem; /* Smaller heading size */
+}
+
+.instagram-info-container p {
+  font-size: 0.9rem; /* Reduce paragraph size */
+  line-height: 1.4;
+}
+
+.row.g-3 {
+  flex-direction: column; /* Stack vertically */
+  align-items: center;
+}
+}
+
+
+
+
+
+/*NEWS SECTION */
+#news-section {
+width: 100%;
+  background-color: #EFE6C5;
+  padding: 20px; /* Optional: Add padding for content inside */
+  margin: 0; /* Remove any default margins */
+}
+.media.media-news {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+position: relative;
+padding-bottom: 210px;
+}
+@media (min-width: 768px) {
+.media.media-news {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+}
+@media (min-width: 1200px) {
+.media.media-news {
+    padding-bottom: 25px;
+    margin-bottom: 0;
+}
+}
+.media.media-news .media-body {
+padding: 20px;
+box-shadow: 0 22px 28px 0 rgba(0, 0, 0, 0.06);
+background: #fff;
+position: absolute;
+width: 85%;
+right: 0;
+bottom: 0;
+}
+@media (min-width: 768px) {
+.media.media-news .media-body {
+    position: relative;
+    padding: 46.5px 35px;
+    right: 0;
+}
+}
+@media (min-width: 992px) {
+.media.media-news .media-body {
+    right: 40px;
+    bottom: 0;
+}
+}
+@media (min-width: 1200px) {
+.media.media-news .media-body {
+    position: absolute;
+    right: 35px;
+    width: 60%;
+    padding: 20px;
+}
+}
+.media.media-news .media-body .media-date {
+font-family: "Open Sans", sans-serif;
+color: #848484;
+margin-bottom: 10px;
+}
+.media.media-news .media-body h5 {
+font-size: 22px;
+padding-bottom: 15px;
+margin-bottom: 20px;
+}
+.media.media-news .media-body h5.small {
+font-size: 16px;
+}
+.media.media-news .media-body p {
+font-family: "Open Sans", sans-serif;
+color: #848484;
+}
+.media.media-news .media-body .common-btn {
+margin-top: 10px;
+}
+
+.media-img img {
+border: 3px solid #03001e; /* Black border with 3px thickness */
+border-radius: x; /* Optional: Add rounded corners */
+padding: 5px; /* Optional: Adds spacing inside the border */
+box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Optional: Add a shadow for better styling */
+}
+/* Styling for screens smaller than 430px */
+@media (max-width: 430px) {
+.media-img img {
+    width: 80%; /* Reduces image width to 80% of its container */
+    margin: 0 auto; /* Centers the image horizontally, optional */
+}
+}
+.media-body {
+border: 3px solid #03001e; /* Black border with 3px thickness */
+border-radius: x; /* Optional: Add rounded corners */
+padding: 5px; /* Optional: Adds spacing inside the border */
+box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Optional: Add a shadow for better styling */
+}
