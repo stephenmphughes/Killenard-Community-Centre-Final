@@ -1,0 +1,595 @@
+/* Reset styles for consistent layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================================== */
+/* General Styling for Both Pages */
+/* ================================== */
+body {
+  background-color: #EFE6C5; /* Light Cream background for body */
+  font-family: 'Nunito Sans', sans-serif; /* Friendly, modern appearance */
+  color: #142938; /* Dark Blue for text */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px; /* Centered and responsive */
+  margin: 0 auto;
+}
+
+h1.title {
+  text-align: center;
+  margin: 20px 0;
+  color: #142938; /* A darker color that contrasts well with cream background */
+  font-size: 40px; /* Increase font size for the title to make it more prominent */
+}
+
+
+
+/* ================================== */
+/* Navbar Styling (Common for Both Pages) */
+/* ================================== */
+.navbar {
+  background-color: #142938; /* Background color for the navbar */
+  padding: 15px 0; /* Adds padding inside the navbar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo img {
+  height: 50px; /* Set the logo's height */
+  margin-left: 20px; /* Adds some space to the left of the logo */
+}
+
+.navbar .nav-links {
+  display: flex; /* Flexbox for horizontal layout of navigation links */
+  justify-content: center; /* Centers the navbar links horizontally */
+  align-items: center;
+  list-style: none; /* Remove default list styling */
+}
+
+.navbar .nav-links a {
+  color: white; /* White color for the links */
+  text-decoration: none; /* Removes the underline from links */
+  padding: 10px 20px; /* Adds padding inside the links */
+  margin: 0 10px; /* Adds space between links */
+  font-size: 18px; /* Sets the font size for the links */
+  font-weight: 400; /* Normal weight for the text */
+  transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+.navbar .nav-links a:hover {
+  background-color: #142938;
+  padding: 10px 20px; /* Keep consistent padding on hover */
+}
+
+.navbar .nav-links .active {
+  background-color: transparent; /* Remove active background color */
+  padding: 10px 20px; /* Keep consistent padding for active link */
+}
+
+/* Menu Toggle Button (For Mobile Only) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: none;
+  border: none;
+  margin-right: 20px;
+}
+
+.menu-toggle .bar {
+  background-color: #142938;
+  height: 3px;
+  width: 25px;
+  margin: 5px 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-links.active {
+  background-color: #142938;
+}
+
+.menu-toggle.active {
+  background-color: #142938;
+}
+
+button, .menu-toggle {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .navbar {
+      flex-wrap: wrap; /* Adjust navbar layout for small screens */
+  }
+
+  .nav-links {
+      display: none; /* Hide navigation links initially */
+      flex-direction: column; /* Arrange links vertically */
+      width: 100%; /* Take full width */
+      position: absolute;
+      top: 60px; /* Adjust to appear below navbar */
+      left: 0;
+      background-color: #142938; /* Same navbar background */
+  }
+
+  .nav-links.active {
+      display: flex; /* Show links when active */
+  }
+
+  .nav-links li {
+      margin: 10px 0; /* Space between links */
+  }
+
+  .menu-toggle {
+      display: flex; /* Show toggle button */
+  }
+
+  /* Animate toggle button bars */
+  .menu-toggle.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+      opacity: 0; /* Hide middle bar */
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+
+
+/* ================================== */
+/* Button Styling (Common for Both Pages) */
+/* ================================== */
+/* Button container styles */
+.text-center.my-5 {
+  text-align: center; /* Centers the button */
+  margin-top: 30px; /* Adds spacing above the button */
+  margin-bottom: 30px; /* Adds spacing below the button */
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #142938; /* Button background color */
+  border-color: #142938; /* Border color */
+  padding: 15px 30px; /* Adds padding inside the button */
+  font-size: 18px; /* Increases font size */
+  text-transform: uppercase; /* Makes text uppercase */
+  letter-spacing: 1px; /* Adds letter spacing */
+  border-radius: 30px; /* Rounds the button edges */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect */
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker blue when hovered */
+  border-color: #0056b3; /* Darker blue border on hover */
+  transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+/* Focus state for accessibility */
+.btn-primary:focus {
+  outline: none; /* Removes outline on focus */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); /* Adds a blue shadow when focused */
+}
+
+
+
+/* ================================== */
+/* Footer Styling (Common for Both Pages) */
+/* ================================== */
+/* Footer container */
+.footer {
+  background-color: #E7BF30; /* Yellow background for the footer */
+  padding: 40px 20px; /* Adds padding around the footer */
+  text-align: center; /* Center-aligns the content inside the footer */
+  position: relative; /* Ensure the ::before element is positioned relative to the footer */
+  z-index: 1; /* Ensures footer content is above the ::before element */
+}
+
+/* Yellow curve effect on the top of the footer */
+.footer::before {
+  content: ""; /* Empty content for the pseudo-element */
+  position: absolute; /* Position it relative to the footer */
+  top: -20px; /* Push it up so it creates a curve */
+  left: 0;
+  width: 100%;
+  height: 40px; /* Height of the curve */
+  background-color: #E7BF30; /* Matches the footer's background color */
+  border-radius: 50% 50% 0 0; /* Makes it a rounded curve */
+  z-index: -1; /* Ensure the curve stays behind the footer content */
+}
+
+/* Footer logo */
+.footer .footer-logo-img {
+  width: 60px !important;  /* Ensure this size is applied */
+  height: auto !important; /* Ensure aspect ratio */
+  max-width: 100% !important; /* Ensure it fits within container */
+}
+
+/* Footer text (tagline or description) */
+.footer .tagline {
+  font-size: 18px; /* Font size for the tagline */
+  color: #333; /* Dark color for the text */
+  margin-bottom: 30px; /* Space below the tagline */
+}
+
+/* Footer navigation links */
+.footer .nav-links {
+  list-style: none; /* Removes default list styling */
+  padding: 0; /* Removes padding */
+}
+
+.footer .nav-links li {
+  display: inline-block; /* Makes the list items inline */
+  margin: 0 15px; /* Adds spacing between links */
+}
+
+.footer .nav-links a {
+  text-decoration: none; /* Removes underline */
+  color: #333; /* Dark color for the links */
+  font-size: 16px; /* Sets the font size */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.footer .nav-links a:hover {
+  color: #142938; /* Changes the link color on hover */
+}
+
+/* Footer social media icons */
+.footer .social-media {
+  margin-top: 20px; /* Adds space between nav links and social media */
+}
+
+.footer .social-media a {
+  margin: 0 10px; /* Adds spacing between icons */
+  font-size: 24px; /* Sets the size for the icons */
+  color: #333; /* Dark color for the icons */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.footer .social-media a:hover {
+  color: #142938; /* Changes the icon color on hover */
+}
+
+/* Media Queries for Footer Responsiveness */
+@media (max-width: 768px) {
+  /* Adjust the footer layout for smaller screens */
+  .footer .tagline {
+    font-size: 16px; /* Slightly smaller tagline text */
+  }
+
+  .footer .nav-links {
+    margin-top: 20px; /* Adds space above the nav links */
+  }
+
+  .footer .social-media {
+    margin-top: 20px; /* Adds space above the social media icons */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer .nav-links li {
+    display: block; /* Stack the navigation links on smaller screens */
+    margin: 10px 0; /* Adds vertical spacing between links */
+  }
+
+  .footer .social-media a {
+    font-size: 20px; /* Slightly smaller social media icons */
+  }
+
+  /* Resize footer logo on small screens */
+  .footer .footer-logo-img {
+    width: 50px !important; /* Smaller logo on mobile */
+  }
+}
+
+
+/* ================================== */
+/* Facilities Page Styling */
+/* ================================== */
+
+.facilities-page {
+  background-color: #E7BF30; /* Set yellow background color for the page */
+  padding: 40px 20px;  /* Adds padding around the page */
+  min-height: 100vh;  /* Ensures the background covers the full screen */
+}
+
+/* Card Grid Layout */
+.card {
+  background-color: #EFE6C5;  /* Yellow background for the card */
+  box-sizing: border-box;  /* Includes padding and border in the width/height calculation */
+  border-radius: 8px;  /* Rounded corners */
+  width: 100%;
+  max-width: 300px;  /* Maximum width of the card */
+  min-height: 400px;  /* Minimum height to ensure all cards have the same height */
+  text-align: center;  /* Centers the text inside the card */
+  padding: 20px;  /* Padding inside the card */
+  display: flex;
+  flex-direction: column;  /* Stacks content vertically */
+  justify-content: space-between;  /* Distributes content evenly */
+  align-items: center;  /* Centers content horizontally */
+  border: 2px solid #142938;  /* Consistent blue border */
+  margin-bottom: 20px;  /* Space between cards in the grid */
+}
+
+.card:focus {
+  outline: none;  /* Removes the focus outline when the card is focused */
+}
+
+/* Card Content */
+.card .card-content {
+  background-color: #EFE6C5; /* Yellow background for the card content */
+  padding: 20px;
+  border-radius: 8px;  /* Rounded corners */
+  width: 100%;  /* Full width of the card */
+  text-align: center;  /* Centers the content */
+  display: flex;
+  flex-direction: column;  /* Stacks content inside the card */
+  justify-content: space-between;  /* Distributes content evenly */
+  align-items: center;  /* Centers content horizontally */
+  flex-grow: 1; /* Makes the content take up all available space */
+}
+
+/* Card Image */
+.card-image {
+  max-width: 100%;  /* Image takes up the full available width */
+  height: auto;  /* Maintains the image aspect ratio */
+  object-fit: contain;  /* Ensures the image is well-fitted */
+  margin-bottom: 20px;  /* Space between image and text */
+}
+
+/* Title and Text in Card */
+.card-content h2 {
+  font-size: 20px;
+  color: #142938;  /* Dark blue for the title */
+  margin-bottom: 10px;  /* Space below the title */
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #142938;  /* Dark blue for the text */
+}
+
+/* Card Grid Layout */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;  /* Cards wrap when they exceed the screen width */
+  justify-content: space-around;  /* Distributes cards evenly in the grid */
+  gap: 20px;  /* Adds space between cards */
+  margin-top: 20px;  /* Adds space above the grid */
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+  .facilities-page {
+    padding: 20px;  /* Less padding for smaller screens */
+  }
+
+  .card {
+    max-width: 100%;  /* Card takes up full width on smaller screens */
+    padding: 15px;  /* Less padding in the card */
+    min-height: 350px;  /* Adjusted minimum height for smaller screens */
+  }
+
+  .card-image {
+    max-width: 60%;  /* Image slightly smaller on smaller screens */
+  }
+
+  .card-content h2 {
+    font-size: 18px;  /* Smaller title font size */
+  }
+
+  .card-content p {
+    font-size: 12px;  /* Smaller text size */
+  }
+}
+
+/* For very small devices (mobile) */
+@media (max-width: 480px) {
+  .card-image {
+    max-width: 50%;  /* Image smaller for very small devices */
+  }
+
+  .card-content h2 {
+    font-size: 16px;  /* Even smaller title font size */
+  }
+
+  .card-content p {
+    font-size: 10px;  /* Small text for very small screens */
+  }
+}
+
+
+
+
+
+
+/* ================================== */
+/* Activities Page Styling */
+/* ================================== */
+
+.activities-page {
+  background-color: #E7BF30;  /* Set yellow background color for the page */
+  padding: 40px 20px;  /* Adds padding around the page */
+  min-height: 100vh;  /* Ensures the background covers the full screen */
+}
+
+/* Card Grid Layout */
+.card {
+  background-color: #EFE6C5;  /* Yellow background for the card */
+  box-sizing: border-box;  /* Include padding and borders in width/height calculation */
+  border-radius: 8px;  /* Rounded corners */
+  width: 100%;
+  max-width: 300px;  /* Limits the card width */
+  min-height: 400px;  /* Minimum height to ensure all cards are the same height */
+  text-align: center;  /* Center the text within the card */
+  padding: 20px;  /* Adds padding inside the card */
+  display: flex;
+  flex-direction: column;  /* Stacks content vertically */
+  justify-content: space-between;  /* Distribute content evenly */
+  align-items: center;  /* Horizontally center content */
+  border: 20px solid #142938;  /* Increase the border size to 3px */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);  /* Add a slight shadow around the card to enhance visibility */
+  margin-bottom: 20px;  /* Space between cards */
+}
+
+/* Hover effect for cards */
+.card:hover {
+  transform: scale(1.05);  /* Slight zoom effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);  /* Slightly stronger shadow on hover */
+}
+
+.card:focus {
+  outline: none;  /* Remove focus outline */
+}
+
+/* Card Image */
+.card-image {
+  max-width: 100%;  /* Image takes full width of the card */
+  height: auto;  /* Keep aspect ratio of images */
+  object-fit: contain;  /* Ensures images fit inside the card without stretching */
+  margin-bottom: 20px;  /* Space between image and text */
+}
+
+/* Card Content */
+.card-content {
+  padding: 20px;  /* Padding inside the card content */
+  background-color: #F8C54A;  /* Yellow background */
+  border-radius: 8px;  /* Rounded corners */
+  width: 100%;  /* Full width of the card */
+  display: flex;
+  flex-direction: column;  /* Stack content vertically */
+  justify-content: space-between;  /* Distribute content */
+  align-items: center;  /* Horizontally center content */
+  flex-grow: 1;  /* Let content fill available space */
+}
+
+/* Card Title */
+.card-content h2 {
+  font-size: 20px;  /* Title size */
+  color: #142938;  /* Blue color */
+  margin-bottom: 10px;  /* Space below the title */
+}
+
+/* Card Text */
+.card-content p {
+  font-size: 14px;  /* Text size */
+  color: #142938;  /* Blue text color */
+}
+
+/* Card Grid Layout (Flexbox) */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;  /* Cards will wrap to the next line */
+  justify-content: space-around;  /* Distribute cards equally */
+  gap: 20px;  /* Space between cards */
+  margin-top: 20px;  /* Space above the grid */
+}
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+  .activities-page {
+    padding: 20px;  /* Less padding for smaller screens */
+  }
+
+  .card {
+    max-width: 100%;  /* Cards take up 100% of the screen width on smaller devices */
+    padding: 15px;  /* Less padding in cards */
+    min-height: 350px;  /* Adjusted card height */
+  }
+
+  .card-image {
+    max-width: 60%;  /* Reduce image size */
+  }
+
+  .card-content h2 {
+    font-size: 18px;  /* Smaller title font */
+  }
+
+  .card-content p {
+    font-size: 12px;  /* Smaller text */
+  }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+  .card-image {
+    max-width: 50%;  /* Further reduce image size */
+  }
+
+  .card-content h2 {
+    font-size: 16px;  /* Even smaller title font */
+  }
+
+  .card-content p {
+    font-size: 10px;  /* Even smaller text */
+  }
+}
+
+
+
+
+
+
+/* ================================== */
+/* Media Queries for Responsiveness */
+/* ================================== */
+@media (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr); /* Keep two columns layout for tablets and larger screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr; /* 1 column layout for tablets and smaller screens */
+  }
+
+  @media (max-width: 768px) {
+    .card-content h2 {
+      font-size: 20px; /* Slightly smaller font for headings */
+    }
+  
+    .card-content p {
+      font-size: 12px; /* Slightly smaller text for descriptions */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card-content h2 {
+      font-size: 18px; /* Even smaller for mobile devices */
+    }
+  
+    .card-content p {
+      font-size: 12px; /* Ensure readability on mobile */
+    }
+  }
+
+  .card-content p.price {
+    font-size: 14px; /* Adjust price size */
+  }
+}
+
+@media (max-width: 480px) {
+  .card-grid {
+    grid-template-columns: 1fr; /* 1 column layout on mobile devices */
+  }
+
+  .card-content h2 {
+    font-size: 24px; /* Adjust heading size for mobile screens */
+  }
+
+  .card-content p {
+    font-size: 12px; /* Adjust description size for mobile screens */
+  }
