@@ -1,4 +1,4 @@
-document.querySelectorAll(".toggle-btn").forEach(button => {
+document.querySelectorAll(".toggle-btn").forEach(button => {   //loop for buttons
     button.addEventListener("click", () => {
         const content = button.previousElementSibling; // The .card-text element
         content.classList.toggle("hidden"); // Toggle visibility of content
